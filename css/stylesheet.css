@@ -1,5 +1,9 @@
 h1 {color: rgb(15,0,128);}
 body {background-color: orange;}
-nav {background-color: lightblue;
+header {background-color: lightblue;
 text-align: center;}
+nav {display: flex; justify-content: center; gap: 10px; padding-bottom: 5px;}
 #index_title {font-family: 'Montserrat', sans-serif;}
+
+footer {background-color: lightblue;
+text-align: center;}
