@@ -11,9 +11,21 @@ do {
     }
 } while (isNaN(answer))
 
+let message = ''
 for (let course of courselist) {
     if (course.code.includes(answer)) {
-        
+        message = `Yes I am taking the course: ${course.code} - ${course.name}`
+        console.log(message)
     }
+
 }
+if (message == '') {
+    let newcourse = {
+        code: answer,
+        name: null
+    }
+    courselist.push(newcourse)
+    console.log("Successfully added course")
+}
+
     
