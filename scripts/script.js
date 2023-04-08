@@ -24,13 +24,31 @@ function findCourse(courselist) {
     
     for (let course of courselist) {
         if (course.code.includes(answer)) {
-            let select = document.querySelector(course_answer)
-            select.courselist.add("green")
-            
+            let li = document.querySelector(course_answer)
+            li.classList.toggle("green")
+            return
         }
     }
+    ul = document.querySelector("ul")
+    newli = document.createElement("li")
+    newa = document.createElement("a")
+    newp1 = document.createElement("p")
+    newp2 = document.createElement("p")
+    newli.id = course_answer.replace("#","")
+    newa.classList.add("first")
+    newp1.classList.add("third")
+    newp2.classList.add("second")
+    newa.textContent = answer
+    newp1.textContent = "Winter2023"
+    newp2.textContent = "N/A"
+    ul.appendChild(newli)
+    newli.appendChild(newa)
+    newli.appendChild(newp1)
+    newli.appendChild(newp2)
+
 }
 findCourse(courselist)
+// from lab 7
 // let message = ''
 // for (let course of courselist) {
 //     if (course.code.includes(answer)) {
